@@ -22,4 +22,11 @@ class City < ApplicationRecord
     "Vilnius" => "VNO",
     "Brussels" => "BRU"
   }
+
+
+  has_many :airports
+  validates :name, presence: true
+
+  has_attachment :background_photo
+  has_attachment :card_photo
 end
